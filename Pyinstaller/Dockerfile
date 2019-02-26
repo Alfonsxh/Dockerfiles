@@ -6,7 +6,7 @@ RUN set -x \
     && echo "deb-src http://mirrors.aliyun.com/debian/ stretch main non-free contrib" >> /etc/apt/sources.list \
     && echo "deb-src http://mirrors.aliyun.com/debian/ stretch-proposed-updates main non-free contrib" >> /etc/apt/sources.list \
     && apt update \
-    && apt install -y gcc tzdata \
+    && apt install -y g++ tzdata \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && apt clean \
     && rm -rf /var/lib/apt/lists/* \
